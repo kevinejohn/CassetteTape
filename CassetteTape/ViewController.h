@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController {
+    bool play;
+}
+@property (weak, nonatomic) IBOutlet UIImageView *spoolTop;
+@property (weak, nonatomic) IBOutlet UIImageView *spoolBottom;
 
 @end
