@@ -87,12 +87,12 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     
-    self.spoolTop.layer.cornerRadius = 50.0;
+    self.spoolTop.layer.cornerRadius = self.spoolTop.frame.size.width / 2.0;
     self.spoolTop.layer.masksToBounds = YES;
     self.spoolTop.layer.borderColor = [UIColor blackColor].CGColor;
     self.spoolTop.layer.borderWidth = 2.0;
     
-    self.spoolBottom.layer.cornerRadius = 50.0;
+    self.spoolBottom.layer.cornerRadius = self.spoolBottom.frame.size.width / 2.0;
     self.spoolBottom.layer.masksToBounds = YES;
     self.spoolBottom.layer.borderColor = [UIColor blackColor].CGColor;
     self.spoolBottom.layer.borderWidth = 2.0;
