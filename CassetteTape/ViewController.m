@@ -19,7 +19,7 @@
 @synthesize spoolTop, spoolBottom;
 
 
-- (void)rotateImage:(UIImageView *)image duration:(NSTimeInterval)duration 
+- (void)rotateImage:(UIImageView *)image duration:(NSTimeInterval)duration withKey:(NSString*)key
 {
     
     CATransform3D rotationTransform = CATransform3DMakeRotation(1.0f * M_PI, 0, 0, 1.0);
@@ -32,25 +32,53 @@
     rotationAnimation.cumulative = YES;
     rotationAnimation.repeatCount = 2; 
     rotationAnimation.delegate = self;
+    rotationAnimation.removedOnCompletion = NO;
     
-    [image.layer addAnimation:rotationAnimation forKey:@"rotationAnimation"];
+    [image.layer addAnimation:rotationAnimation forKey:key];
 
 }
 
-#define DURATION 3.0f
+
+#define DURATION_TOP 3.0f
+#define DURATION_BOTTOM 3.0f
+#define SPOOL_TOP_KEY @"top"
+#define SPOOL_BOTTOM_KEY @"bottom"
+
+-(void)StartTopSpool
+{
+    [self rotateImage:self.spoolTop duration:DURATION_TOP withKey:SPOOL_TOP_KEY];
+}
+
+-(void)StartBottomSpool
+{
+    [self rotateImage:self.spoolBottom duration:DURATION_BOTTOM withKey:SPOOL_BOTTOM_KEY];
+}
 
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
 {
-	if (play && flag) {
-        [self rotateImage:self.spoolTop duration:DURATION];
-        [self rotateImage:self.spoolBottom duration:DURATION];
+    if (play) {
+    
+        if (anim == [[self.spoolTop layer] animationForKey:SPOOL_TOP_KEY]) {
+            [self StartTopSpool];
+        }
+        else if (anim == [[self.spoolBottom layer] animationForKey:SPOOL_BOTTOM_KEY]) {
+            [self StartBottomSpool];
+        }
     }
 }
 
 -(void)SpinSpool
 {
-    [self rotateImage:self.spoolTop duration:DURATION];
-    [self rotateImage:self.spoolBottom duration:DURATION];
+    [self StartTopSpool];
+    [self StartBottomSpool];
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    play = YES;
+    [self SpinSpool];
 }
 
 - (void)viewDidLoad
@@ -58,8 +86,13 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    play = YES;
-    [self SpinSpool];
+    
+    self.spoolTop.layer.cornerRadius = 9.0;
+    self.spoolTop.layer.masksToBounds = YES;
+    self.spoolTop.layer.borderColor = [UIColor blackColor].CGColor;
+    self.spoolTop.layer.borderWidth = 3.0;
+
+    
 }
 
 - (void)viewDidUnload
