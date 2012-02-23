@@ -40,7 +40,7 @@
 
 
 #define DURATION_TOP 3.0f
-#define DURATION_BOTTOM 3.0f
+#define DURATION_BOTTOM 2.0f
 #define SPOOL_TOP_KEY @"top"
 #define SPOOL_BOTTOM_KEY @"bottom"
 
@@ -87,10 +87,15 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     
-    self.spoolTop.layer.cornerRadius = 9.0;
+    self.spoolTop.layer.cornerRadius = 50.0;
     self.spoolTop.layer.masksToBounds = YES;
     self.spoolTop.layer.borderColor = [UIColor blackColor].CGColor;
     self.spoolTop.layer.borderWidth = 3.0;
+    
+    self.spoolBottom.layer.cornerRadius = 50.0;
+    self.spoolBottom.layer.masksToBounds = YES;
+    self.spoolBottom.layer.borderColor = [UIColor blackColor].CGColor;
+    self.spoolBottom.layer.borderWidth = 3.0;
 
     
 }
