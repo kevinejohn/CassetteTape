@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B63386B14F6033A003C2599 /* IconSpool.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B63386A14F6033A003C2599 /* IconSpool.png */; };
+		2B63386D14F6033F003C2599 /* IconSpool@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B63386C14F6033F003C2599 /* IconSpool@2x.png */; };
 		961FB6A914F59EDF00D7771A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 961FB6A814F59EDF00D7771A /* UIKit.framework */; };
 		961FB6AB14F59EDF00D7771A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 961FB6AA14F59EDF00D7771A /* Foundation.framework */; };
 		961FB6AD14F59EDF00D7771A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 961FB6AC14F59EDF00D7771A /* CoreGraphics.framework */; };
@@ -17,9 +19,12 @@
 		961FB6BF14F59EDF00D7771A /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 961FB6BD14F59EDF00D7771A /* ViewController.xib */; };
 		961FB6C714F5A13200D7771A /* SpoolOne.png in Resources */ = {isa = PBXBuildFile; fileRef = 961FB6C614F5A13200D7771A /* SpoolOne.png */; };
 		961FB6C914F5A8C300D7771A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 961FB6C814F5A8C300D7771A /* QuartzCore.framework */; };
+		961FB6CD14F5C49A00D7771A /* SpoolTwo.png in Resources */ = {isa = PBXBuildFile; fileRef = 961FB6CB14F5C49A00D7771A /* SpoolTwo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B63386A14F6033A003C2599 /* IconSpool.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IconSpool.png; sourceTree = "<group>"; };
+		2B63386C14F6033F003C2599 /* IconSpool@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IconSpool@2x.png"; sourceTree = "<group>"; };
 		961FB6A414F59EDF00D7771A /* CassetteTape.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CassetteTape.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		961FB6A814F59EDF00D7771A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		961FB6AA14F59EDF00D7771A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -35,6 +40,7 @@
 		961FB6BE14F59EDF00D7771A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		961FB6C614F5A13200D7771A /* SpoolOne.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SpoolOne.png; path = Images/SpoolOne.png; sourceTree = "<group>"; };
 		961FB6C814F5A8C300D7771A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		961FB6CB14F5C49A00D7771A /* SpoolTwo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SpoolTwo.png; path = Images/SpoolTwo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +61,8 @@
 		961FB69914F59EDF00D7771A = {
 			isa = PBXGroup;
 			children = (
+				2B63386C14F6033F003C2599 /* IconSpool@2x.png */,
+				2B63386A14F6033A003C2599 /* IconSpool.png */,
 				961FB6C514F59EEF00D7771A /* Images */,
 				961FB6AE14F59EDF00D7771A /* CassetteTape */,
 				961FB6A714F59EDF00D7771A /* Frameworks */,
@@ -108,6 +116,7 @@
 		961FB6C514F59EEF00D7771A /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				961FB6CB14F5C49A00D7771A /* SpoolTwo.png */,
 				961FB6C614F5A13200D7771A /* SpoolOne.png */,
 			);
 			name = Images;
@@ -166,6 +175,9 @@
 				961FB6B314F59EDF00D7771A /* InfoPlist.strings in Resources */,
 				961FB6BF14F59EDF00D7771A /* ViewController.xib in Resources */,
 				961FB6C714F5A13200D7771A /* SpoolOne.png in Resources */,
+				961FB6CD14F5C49A00D7771A /* SpoolTwo.png in Resources */,
+				2B63386B14F6033A003C2599 /* IconSpool.png in Resources */,
+				2B63386D14F6033F003C2599 /* IconSpool@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,12 +264,12 @@
 		961FB6C314F59EDF00D7771A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Kevin Johnson (E5GR4Q7LXU)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Kevin Johnson";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CassetteTape/CassetteTape-Prefix.pch";
 				INFOPLIST_FILE = "CassetteTape/CassetteTape-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "69981BE4-9A50-48E8-89D0-8D6AD879EB15";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0363AABB-4566-453E-827F-B54F770D284D";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -265,12 +277,12 @@
 		961FB6C414F59EDF00D7771A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Kevin Johnson (E5GR4Q7LXU)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Kevin Johnson";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CassetteTape/CassetteTape-Prefix.pch";
 				INFOPLIST_FILE = "CassetteTape/CassetteTape-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "69981BE4-9A50-48E8-89D0-8D6AD879EB15";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0363AABB-4566-453E-827F-B54F770D284D";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -294,6 +306,7 @@
 				961FB6C414F59EDF00D7771A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

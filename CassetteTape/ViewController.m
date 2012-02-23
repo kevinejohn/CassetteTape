@@ -90,12 +90,12 @@
     self.spoolTop.layer.cornerRadius = 50.0;
     self.spoolTop.layer.masksToBounds = YES;
     self.spoolTop.layer.borderColor = [UIColor blackColor].CGColor;
-    self.spoolTop.layer.borderWidth = 3.0;
+    self.spoolTop.layer.borderWidth = 2.0;
     
     self.spoolBottom.layer.cornerRadius = 50.0;
     self.spoolBottom.layer.masksToBounds = YES;
     self.spoolBottom.layer.borderColor = [UIColor blackColor].CGColor;
-    self.spoolBottom.layer.borderWidth = 3.0;
+    self.spoolBottom.layer.borderWidth = 2.0;
 
     
 }
